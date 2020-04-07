@@ -46,10 +46,10 @@ const person_detail = [
 function modalContent(recordId) {
   const person = person_detail[recordId];
   return `
-  <div class="modal modal-show">
+  <div class="content-el modal modal-show">
     <div class="close"></div>
     <div record-id="${recordId}" class="row profile justify-center">
-      <div class="left column justify-center">
+      <div class="left column content-el justify-center">
         <img class="profile-img" src="${person.skill_img}">
       </div>
 
