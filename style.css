@@ -90,7 +90,7 @@ body {
 }
 
 .modal {
-  background: rgb(233, 233, 233, 0.9);
+  background: rgba(233, 233, 233, 0.9);
   position: absolute;
   width: 90%;
   top: 80px;
@@ -159,4 +159,41 @@ body {
 }
 .item2:hover {
   top: 2px;
+}
+
+.modal-show {
+  animation-name: modal-show;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+.img-hid {
+  animation-name: img-hid;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.img-click-hid {
+  animation-name: img-click-hid;
+  animation-delay: 1s;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes img-hid {
+  0%   {opacity: 1;}
+  100% {opacity: 0;}
+}
+
+@keyframes img-click-hid {
+  0%   {opacity: 1;}
+  100% {opacity: 0;}
+}
+
+@keyframes modal-show {
+  0%   {opacity: 0;}
+  50%  {opacity: 0;}
+  100% {opacity: 1;}
 }
