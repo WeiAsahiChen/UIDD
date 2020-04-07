@@ -77,14 +77,6 @@ function hidPerson(recordId) {
   var recordIdList = ['0', '1', '2', '3', '4', '5'];
   for (recordIdNum of recordIdList) {
     const profile = $(`img[record-id='${recordIdNum}'`)
-    if (recordIdNum == '0' || recordIdNum == '2' || recordIdNum == '4') {
-      profile.removeClass('item1');
-      profile.addClass('item1-click');
-    }
-    if (recordIdNum == '1' || recordIdNum == '3' || recordIdNum == '5') {
-      profile.removeClass('item2');
-      profile.addClass('item2-click');
-      }
     if (recordId != recordIdNum) {
       profile.addClass('img-hid');
     }
