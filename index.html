@@ -1,35 +1,64 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <title>CodePen - AboutUs-Profile</title>
-  <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>About us</title><link rel="stylesheet" href="./style.css">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  <link href="https://db.onlinewebfonts.com/c/0c67ab09c281e7d98fa88a86488e2dcd?family=ITC+Eras" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="./style.css">
+  <title>About us</title>
 </head>
+
 <body>
-<!-- partial:index.partial.html -->
-<div class="navbar">
-  ABOUT US
-</div>
-<!--六個介紹框-->
-
-
-<div id="content" class="content">
-  <div id="members" class="container">
-    <img class="item1" record-id="0" src="./public/person_01.png">
-    <img class="item2" record-id="1" src="./public/person_02.png">
-    <img class="item1" record-id="2" src="./public/person_03.png">
-    <img class="item2" record-id="3" src="./public/person_04.png">
-    <img class="item1" record-id="4" src="./public/person_05.png">
-    <img class="item2" record-id="5" src="./public/person_06.png">
-
+  <!-- partial:index.partial.html -->
+  <div class="navbar">
+    ABOUT US
   </div>
-</div>
+  <!--六個介紹框-->
 
-<!-- partial -->
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script><script  src="./script.js"></script>
+  <div id="content" class="content">
+    <div id="members" class="container">
+      <img class="item1" src="./public/person_01.png">
+      <img class="item2" src="./public/person_02.png">
+      <img class="item1" src="./public/person_03.png">
+      <img class="item2" src="./public/person_04.png">
+      <img class="item1" src="./public/person_05.png">
+      <img class="item2" src="./public/person_06.png">
+    </div>
+    <div>
+      <button onclick="showModal(0)">0</button>
+      <button onclick="showModal(1)">1</button>
+      <button onclick="showModal(2)">2</button>
+      <button onclick="showModal(3)">3</button>
+      <button onclick="showModal(4)">4</button>
+      <button onclick="showModal(5)">5</button>
+    </div>
+  </div>
+
+  <div class="modal">
+    <div class="close"></div>
+    <div class="row profile justify-center">
+      <!-- 雷達圖 -->
+      <div class="left column justify-center">
+        <img class="profile-img" src="./public/profile_01.png">
+      </div>
+
+      <!-- 個人簡介 -->
+      <div class="right profile-info content-el column justify-center">
+        <div>
+          <h1 id="name">陳位旭</h1>
+          <p id="degree">工資109</p>
+          <p id="position">街頭賣藥</p>
+          <h2 id="motto">"凡事求個緣, idea不用選"</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+  <script src="./script.js"></script>
 
 </body>
+
 </html>

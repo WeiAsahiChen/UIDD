@@ -4,12 +4,6 @@ body {
   height: 100%;
   width: 100%;
   margin: 0;
-  /*background-image: url("https://drive.google.com/uc?export=view&id=1T5nWwp9pHF09eTfOcDReJbtzO5PgCScK");
-  background-size: 100vw 100vh;*/
-}
-
-.header {
-  height: 100px !important;
 }
 
 .main-img {
@@ -47,18 +41,16 @@ body {
 }
 
 .profile > .left {
-  width: 66.6%;
+  width: 64%;
 }
 
 .profile > .right {
-  width: 33.4%;
+  width: 36%;
 }
 
 .profile-img {
-
-  width: 80%;
-  margin: 0 10%;
-
+  width: 90%;
+  height: auto;
 }
 
 .vertical-center {
@@ -72,9 +64,10 @@ body {
 }
 
 .navbar {
-  font-family: "Microsoft JhengHei", "Helvetica Neue", Helvetica;
+  font-family: "ITC Eras","Microsoft JhengHei", "Helvetica Neue", Helvetica;
   font-size: 50px;
   text-align: center;
+  margin-top: 15px;
   height: 100px;
   word-spacing: 30px;
   font-weight: 300;
@@ -82,33 +75,28 @@ body {
 
 .profile-info h1 {
   margin-bottom: 0;
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: bolder;
 }
 
 .profile-info h2 {
-  font-size: 1.7rem;
-  margin: 4em 0 0 0;
-}
-
-.profile-info h3 {
-  font-size: 1.7rem;
-  margin: 0 0 1em 0;
+  font-size: 2rem;
+  margin: 4em 0 1em 0;
 }
 
 .profile-info p {
   margin: 0;
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 .modal {
   background: rgb(233, 233, 233, 0.9);
   position: absolute;
-  width: 70%;
-  top: 75px;
+  width: 90%;
+  top: 80px;
   left: 0;
   right: 0;
-  margin: auto;
+  margin: 0 5%;
   overflow: auto;
 }
 
@@ -171,41 +159,4 @@ body {
 }
 .item2:hover {
   top: 2px;
-}
-
-.modal-show {
-  animation-name: modal-show;
-  animation-duration: 2s;
-  animation-fill-mode: forwards;
-}
-
-.img-hid {
-  animation-name: img-hid;
-  animation-duration: 1s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-}
-
-.img-click-hid {
-  animation-name: img-click-hid;
-  animation-delay: 1s;
-  animation-duration: 0.5s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-}
-
-@keyframes img-hid {
-  0%   {opacity: 1;}
-  100% {opacity: 0;}
-}
-
-@keyframes img-click-hid {
-  0%   {opacity: 1;}
-  100% {opacity: 0;}
-}
-
-@keyframes modal-show {
-  0%   {opacity: 0;}
-  50%  {opacity: 0;}
-  100% {opacity: 1;}
 }
