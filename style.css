@@ -1,6 +1,6 @@
 body {
   font-family: "Microsoft JhengHei", Helvetica, sans-serif;
-  background:#C1E8E3;
+  background: #c1e8e3;
   height: 100%;
   width: 100%;
   margin: 0;
@@ -11,12 +11,12 @@ body {
   width: 100%;
 }
 
-.content-height {
-  height: calc(100vh - 100px);
+.content {
+  min-height: calc(100vh - 100px);
 }
 
 .content-el {
-  height: calc(100vh - 100px);
+  min-height: calc(100vh - 100px);
 }
 
 .col-half {
@@ -64,11 +64,11 @@ body {
 }
 
 .navbar {
-  font-family: "ITC Eras","Microsoft JhengHei", "Helvetica Neue", Helvetica;
+  font-family: "ITC Eras", "Microsoft JhengHei", "Helvetica Neue", Helvetica;
   font-size: 50px;
   text-align: center;
-  margin-top: 15px;
-  height: 100px;
+  padding-top: 15px;
+  height: 80px;
   word-spacing: 30px;
   font-weight: 300;
 }
@@ -93,7 +93,7 @@ body {
   background: rgba(233, 233, 233, 0.9);
   position: absolute;
   width: 90%;
-  top: 80px;
+  top: 85px;
   left: 0;
   right: 0;
   margin: 0 5%;
@@ -132,12 +132,13 @@ body {
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
-  height: 80vh;
+  margin: 0 5%;
 }
+
 .item2,
 .item1 {
-  margin: 0.5%;
-  height: 70vh;
+  margin: 0 0.5%;
+  height: 80vh;
   cursor: pointer;
   color: #ffffff;
   opacity: 1;
@@ -183,17 +184,31 @@ body {
 }
 
 @keyframes img-hid {
-  0%   {opacity: 1;}
-  100% {opacity: 0;}
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 @keyframes img-click-hid {
-  0%   {opacity: 1;}
-  100% {opacity: 0;}
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 @keyframes modal-show {
-  0%   {opacity: 0;}
-  50%  {opacity: 0;}
-  100% {opacity: 1;}
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
