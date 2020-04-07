@@ -1,0 +1,162 @@
+body {
+  font-family: "Microsoft JhengHei", Helvetica, sans-serif;
+  background:#C1E8E3;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+.main-img {
+  height: 100%;
+  width: 100%;
+}
+
+.content-height {
+  height: calc(100vh - 100px);
+}
+
+.content-el {
+  height: calc(100vh - 100px);
+}
+
+.col-half {
+  width: 50%;
+}
+
+.row,
+.column {
+  display: flex;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.profile > .left {
+  width: 64%;
+}
+
+.profile > .right {
+  width: 36%;
+}
+
+.profile-img {
+  width: 60%;
+  margin: 0 20%;
+}
+
+.vertical-center {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.profile-info > div {
+  width: 100%;
+}
+
+.navbar {
+  font-family: "ITC Eras","Microsoft JhengHei", "Helvetica Neue", Helvetica;
+  font-size: 50px;
+  text-align: center;
+  margin-top: 15px;
+  height: 100px;
+  word-spacing: 30px;
+  font-weight: 300;
+}
+
+.profile-info h1 {
+  margin-bottom: 0;
+  font-size: 3rem;
+  font-weight: bolder;
+}
+
+.profile-info h2 {
+  font-size: 2rem;
+  margin: 4em 0 1em 0;
+}
+
+.profile-info p {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.modal {
+  background: rgb(233, 233, 233, 0.9);
+  position: absolute;
+  width: 90%;
+  top: 80px;
+  left: 0;
+  right: 0;
+  margin: 0 5%;
+  overflow: auto;
+}
+
+.modal .close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 3rem;
+  height: 3rem;
+  opacity: 0.3;
+}
+.close:hover {
+  opacity: 1;
+}
+.close:before,
+.close:after {
+  position: absolute;
+  left: 15px;
+  content: " ";
+  height: 3rem;
+  width: 5px;
+  background-color: #333;
+}
+.close:before {
+  transform: rotate(45deg);
+}
+.close:after {
+  transform: rotate(-45deg);
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: 80vh;
+}
+.item2,
+.item1 {
+  margin: 0.5%;
+  height: 70vh;
+  cursor: pointer;
+  color: #ffffff;
+  opacity: 1;
+}
+.item1 {
+  align-self: flex-start;
+}
+.item2 {
+  align-self: center;
+}
+.item1:hover,
+.item2:hover {
+  transition-duration: 0.5s;
+  opacity: 0.5;
+  position: relative;
+}
+.item1:hover {
+  bottom: 2px;
+}
+.item2:hover {
+  top: 2px;
+}
