@@ -65,4 +65,6 @@ function modalContent(index) {
       `;
 }
 
-function showModal(index) {}
+function showModal(index) {
+  $(".profile").empty().append(modalContent(index));
+}
