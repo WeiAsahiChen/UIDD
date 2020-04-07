@@ -83,12 +83,18 @@ function hidPerson(recordId) {
   }
 }
 
-function hidModal(recodeId){
-  
+function hidModal(recordId){
+  $(`img[record-id='${recordId}'`).removeClass("img-click-hid");
+  console.log("ok");
+  $(".modal-show").remove();
 }
 
 function showPerson(recordId){
-
+  var recordIdList = ["0", "1", "2", "3", "4", "5"];
+  for (recordIdNum of recordIdList) {
+    const profile = $(`img[record-id='${recordIdNum}'`);
+    profile.removeClass("img-hid");
+  }
 }
 
 $("body").delegate("img", "click", function (e) {
@@ -97,8 +103,8 @@ $("body").delegate("img", "click", function (e) {
   showModal(recordId);
 });
 
-$("body").delegate("close","click", function (e){
-  const recordId = $(this).attr("record-id");
+$("body").delegate(".close","click", function (e){
+  const recordId = $(".img-click-hid").attr("record-id");
   hidModal(recordId);
   showPerson(recordId);
 })
