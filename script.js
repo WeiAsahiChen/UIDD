@@ -86,8 +86,10 @@ function hidProfile(recordId) {
   }
 }
 
+
 $('body').delegate('img', 'click', function (e) {
   const recordId = $(this).attr('record-id');
   hidProfile(recordId)
   showModal(recordId)
 });
+
