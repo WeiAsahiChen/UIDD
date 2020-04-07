@@ -83,8 +83,22 @@ function hidPerson(recordId) {
   }
 }
 
+function hidModal(recodeId){
+  
+}
+
+function showPerson(recordId){
+
+}
+
 $("body").delegate("img", "click", function (e) {
   const recordId = $(this).attr("record-id");
   hidPerson(recordId);
   showModal(recordId);
 });
+
+$("body").delegate("close","click", function (e){
+  const recordId = $(this).attr("record-id");
+  hidModal(recordId);
+  showPerson(recordId);
+})
