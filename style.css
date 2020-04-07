@@ -162,6 +162,20 @@ body {
   top: 2px;
 }
 
+.item2-click,
+.item1-click {
+  margin: 0.5%;
+  height: 70vh;
+  color: #ffffff;
+  opacity: 1;
+}
+.item1-click {
+  align-self: flex-start;
+}
+.item2-click {
+  align-self: center;
+}
+
 .modal-show {
   animation-name: modal-show;
   animation-duration: 2s;
@@ -203,12 +217,12 @@ body {
 
 @keyframes modal-show {
   0% {
-    opacity: 0;
+    transform: scale(1,0);
   }
   50% {
-    opacity: 0;
+    transform: scale(1,0);
   }
   100% {
-    opacity: 1;
+    transform: scale(1,1);
   }
 }
