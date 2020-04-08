@@ -254,12 +254,15 @@ body {
 
 @keyframes modal-show {
   0% {
+    opacity: 0;
     transform: scale(1, 0);
   }
   50% {
+    opacity: 0;
     transform: scale(1, 0);
   }
   100% {
+    opacity: 1;
     transform: scale(1, 1);
   }
 }
