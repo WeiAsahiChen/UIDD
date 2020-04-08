@@ -70,7 +70,7 @@ var modal_show = false;
 function showModal(recordId) {
   if (modal_show) return;
 
-  const imgClick = $(`img[record-id='${recordId}'`);
+  const imgClick = $(`div.item[record-id='${recordId}']`);
   imgClick.addClass("img-click-hid");
   $("#modal_place").empty().append(modalContent(recordId));
 
@@ -80,7 +80,7 @@ function showModal(recordId) {
 function hidPerson(recordId) {
   var recordIdList = ["0", "1", "2", "3", "4", "5"];
   for (recordIdNum of recordIdList) {
-    const profile = $(`img[record-id='${recordIdNum}'`);
+    const profile = $(`div.item[record-id='${recordIdNum}']`);
     profile.addClass("no-pointer-events");
     /*
     if (recordIdNum == "0" || recordIdNum == "2" || recordIdNum == "4") {
@@ -102,7 +102,7 @@ function hidPerson(recordId) {
 function hidModal(recordId) {
   if (!modal_show) return;
 
-  $(`img[record-id='${recordId}'`).removeClass("img-click-hid");
+  $(`div.item[record-id='${recordId}']`).removeClass("img-click-hid");
   console.log("ok");
   $("#modal_place").empty();
 
@@ -112,7 +112,7 @@ function hidModal(recordId) {
 function showPerson(recordId) {
   var recordIdList = ["0", "1", "2", "3", "4", "5"];
   for (recordIdNum of recordIdList) {
-    const profile = $(`img[record-id='${recordIdNum}'`);
+    const profile = $(`div.item[record-id='${recordIdNum}']`);
     /*
     if (recordIdNum == "0" || recordIdNum == "2" || recordIdNum == "4") {
       console.log(recordIdNum);
@@ -124,7 +124,7 @@ function showPerson(recordId) {
       profile.removeClass("item2-click");
     }
     */
-    profile.removeClass('no-pointer-events');
+    profile.removeClass("no-pointer-events");
     if (recordId != recordIdNum) {
       profile.removeClass("img-hid");
     }
@@ -132,11 +132,11 @@ function showPerson(recordId) {
 }
 
 $(document).ready(() => {
-  $(".item_higher").addClass("initial_item_higher");
-  $(".item_lower").addClass("initial_item_lower");
+  $(".item.higher").addClass("initial_item_higher");
+  $(".item.lower").addClass("initial_item_lower");
 });
 
-$("body").delegate("img", "click", function (e) {
+$("body").delegate("div.item", "click", function (e) {
   const recordId = $(this).attr("record-id");
   hidPerson(recordId);
   showModal(recordId);

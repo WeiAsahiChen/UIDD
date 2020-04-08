@@ -1,5 +1,5 @@
 body {
-  font-family: "Microsoft JhengHei", Helvetica, sans-serif;
+  font-family: "ITC Eras", "Microsoft JhengHei", "Helvetica Neue", Helvetica;
   background: #c1e8e3;
   height: 100%;
   width: 100%;
@@ -65,7 +65,6 @@ body {
 }
 
 .navbar {
-  font-family: "ITC Eras", "Microsoft JhengHei", "Helvetica Neue", Helvetica;
   font-size: 50px;
   text-align: center;
   padding-top: 15px;
@@ -136,8 +135,7 @@ body {
   margin: 0 5%;
 }
 
-.item_lower,
-.item_higher {
+.item {
   margin: 0 0.5%;
   height: 80vh;
   cursor: pointer;
@@ -145,23 +143,49 @@ body {
   opacity: 1;
   position: relative;
 }
-.item_higher {
+
+.item img {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.item h1 {
+  position: absolute;
+  top: 400px;
+  left: 20px;
+  font-size: 25px;
+  opacity: 0;
+  line-height: 40px;
+}
+
+.item.higher {
   align-self: flex-start;
 }
-.item_lower {
+.item.lower {
   align-self: center;
 }
-.item_higher:hover,
-.item_lower:hover {
+
+.item:hover {
   transition-duration: 0.5s;
-  opacity: 0.5;
   position: relative;
+  background-color: black;
 }
-.item_higher:hover {
+
+.item.higher:hover {
   bottom: 2px;
 }
-.item_lower:hover {
+
+.item.lower:hover {
   top: 2px;
+}
+
+.item:hover img {
+  opacity: 0.5;
+}
+
+.item:hover h1 {
+  opacity: 1;
 }
 
 .iOver {
