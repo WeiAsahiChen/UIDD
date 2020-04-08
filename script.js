@@ -66,26 +66,33 @@ function modalContent(recordId) {
       `;
 }
 
+var modal_show = false;
 function showModal(recordId) {
-  /*$(".profile").empty().append(modalContent(index));*/
+  if (modal_show) return;
+
   const imgClick = $(`img[record-id='${recordId}'`);
   imgClick.addClass("img-click-hid");
-  $("#content").append(modalContent(recordId));
+  $("#modal_place").empty().append(modalContent(recordId));
+
+  modal_show = true;
 }
 
 function hidPerson(recordId) {
   var recordIdList = ["0", "1", "2", "3", "4", "5"];
   for (recordIdNum of recordIdList) {
     const profile = $(`img[record-id='${recordIdNum}'`);
+    profile.addClass("no-pointer-events");
+    /*
     if (recordIdNum == "0" || recordIdNum == "2" || recordIdNum == "4") {
       console.log(recordIdNum);
-      profile.removeClass("item1");
-      profile.addClass("item1-click");
+      // profile.removeClass("item1");
+      // profile.addClass("item1-click");
     }
     if (recordIdNum == "1" || recordIdNum == "3" || recordIdNum == "5") {
-      profile.removeClass("item2");
-      profile.addClass("item2-click");
+      // profile.removeClass("item2");
+      // profile.addClass("item2-click");
     }
+    */
     if (recordId != recordIdNum) {
       profile.addClass("img-hid");
     }
@@ -93,15 +100,20 @@ function hidPerson(recordId) {
 }
 
 function hidModal(recordId) {
+  if (!modal_show) return;
+
   $(`img[record-id='${recordId}'`).removeClass("img-click-hid");
   console.log("ok");
-  $(".modal-show").remove();
+  $("#modal_place").empty();
+
+  modal_show = false;
 }
 
 function showPerson(recordId) {
   var recordIdList = ["0", "1", "2", "3", "4", "5"];
   for (recordIdNum of recordIdList) {
     const profile = $(`img[record-id='${recordIdNum}'`);
+    /*
     if (recordIdNum == "0" || recordIdNum == "2" || recordIdNum == "4") {
       console.log(recordIdNum);
       profile.addClass("item1");
@@ -111,6 +123,8 @@ function showPerson(recordId) {
       profile.addClass("item2");
       profile.removeClass("item2-click");
     }
+    */
+    profile.removeClass('no-pointer-events');
     if (recordId != recordIdNum) {
       profile.removeClass("img-hid");
     }
@@ -118,8 +132,8 @@ function showPerson(recordId) {
 }
 
 $(document).ready(() => {
-  $(".item1").addClass("initial_item1");
-  $(".item2").addClass("initial_item2");
+  $(".item_higher").addClass("initial_item_higher");
+  $(".item_lower").addClass("initial_item_lower");
 });
 
 $("body").delegate("img", "click", function (e) {

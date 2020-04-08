@@ -136,8 +136,8 @@ body {
   margin: 0 5%;
 }
 
-.item2,
-.item1 {
+.item_lower,
+.item_higher {
   margin: 0 0.5%;
   height: 80vh;
   cursor: pointer;
@@ -145,22 +145,22 @@ body {
   opacity: 1;
   position: relative;
 }
-.item1 {
+.item_higher {
   align-self: flex-start;
 }
-.item2 {
+.item_lower {
   align-self: center;
 }
-.item1:hover,
-.item2:hover {
+.item_higher:hover,
+.item_lower:hover {
   transition-duration: 0.5s;
   opacity: 0.5;
   position: relative;
 }
-.item1:hover {
+.item_higher:hover {
   bottom: 2px;
 }
-.item2:hover {
+.item_lower:hover {
   top: 2px;
 }
 
@@ -168,19 +168,19 @@ body {
   opacity: 0.5;
 }
 
-.initial_item1 {
-  animation-name: initial_item1;
+.initial_item_higher {
+  animation-name: initial_item_higher;
   animation-duration: 2s;
   animation-iteration-count: 1;
 }
 
-.initial_item2 {
-  animation-name: initial_item2;
+.initial_item_lower {
+  animation-name: initial_item_lower;
   animation-duration: 2s;
   animation-iteration-count: 1;
 }
 
-@keyframes initial_item1 {
+@keyframes initial_item_higher {
   0% {
     opacity: 0;
     top: -50px;
@@ -191,7 +191,7 @@ body {
   }
 }
 
-@keyframes initial_item2 {
+@keyframes initial_item_lower {
   0% {
     opacity: 0;
     top: 50px;
@@ -202,19 +202,25 @@ body {
   }
 }
 
-.item2-click,
-.item1-click {
+.no-pointer-events {
+  pointer-events: none;
+}
+
+/*
+.item_lower-click,
+.item_higher-click {
   margin: 0 0.5%;
   height: 80vh;
   color: #ffffff;
   opacity: 1;
 }
-.item1-click {
+.item_higher-click {
   align-self: flex-start;
 }
-.item2-click {
+.item_lower-click {
   align-self: center;
 }
+*/
 
 .modal-show {
   animation-name: modal-show;
@@ -230,7 +236,7 @@ body {
 }
 
 .img-click-hid {
-  animation-name: img-click-hid;
+  animation-name: img-hid;
   animation-delay: 1s;
   animation-duration: 0.5s;
   animation-iteration-count: 1;
@@ -238,15 +244,6 @@ body {
 }
 
 @keyframes img-hid {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-@keyframes img-click-hid {
   0% {
     opacity: 1;
   }
