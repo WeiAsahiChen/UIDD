@@ -102,15 +102,14 @@ function hidPerson(recordId) {
 function hidModal(recordId) {
   if (!modal_show) return;
 
-  $(`div.item[record-id='${recordId}']`).removeClass("img-click-hid");
-  console.log("ok");
-  $("#modal_place").empty();
-
+  $(".modal").addClass("modal-close");
+  //$("#modal_place").empty();
   modal_show = false;
 }
 
 function showPerson(recordId) {
   var recordIdList = ["0", "1", "2", "3", "4", "5"];
+  $(`div.item[record-id='${recordId}']`).removeClass("img-click-hid");
   for (recordIdNum of recordIdList) {
     const profile = $(`div.item[record-id='${recordIdNum}']`);
     /*
