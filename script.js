@@ -74,48 +74,53 @@ function showModal(recordId) {
 }
 
 function hidPerson(recordId) {
-  var recordIdList = ['0', '1', '2', '3', '4', '5'];
+  var recordIdList = ["0", "1", "2", "3", "4", "5"];
   for (recordIdNum of recordIdList) {
-    const profile = $(`img[record-id='${recordIdNum}'`)
-    if (recordIdNum == '0' || recordIdNum == '2' || recordIdNum == '4') {
+    const profile = $(`img[record-id='${recordIdNum}'`);
+    if (recordIdNum == "0" || recordIdNum == "2" || recordIdNum == "4") {
       console.log(recordIdNum);
-      profile.removeClass('item1');
-      profile.addClass('item1-click');
+      profile.removeClass("item1");
+      profile.addClass("item1-click");
     }
-    if (recordIdNum == '1' || recordIdNum == '3' || recordIdNum == '5') {
-      profile.removeClass('item2');
-      profile.addClass('item2-click');
+    if (recordIdNum == "1" || recordIdNum == "3" || recordIdNum == "5") {
+      profile.removeClass("item2");
+      profile.addClass("item2-click");
     }
     if (recordId != recordIdNum) {
-      profile.addClass('img-hid');
+      profile.addClass("img-hid");
     }
-  }  
+  }
 }
 
-function hidModal(recordId){
+function hidModal(recordId) {
   $(`img[record-id='${recordId}'`).removeClass("img-click-hid");
   console.log("ok");
   $(".modal-show").remove();
 }
 
-function showPerson(recordId){
-  var recordIdList = ['0', '1', '2', '3', '4', '5'];
+function showPerson(recordId) {
+  var recordIdList = ["0", "1", "2", "3", "4", "5"];
   for (recordIdNum of recordIdList) {
-    const profile = $(`img[record-id='${recordIdNum}'`)
-    if (recordIdNum == '0' || recordIdNum == '2' || recordIdNum == '4') {
+    const profile = $(`img[record-id='${recordIdNum}'`);
+    if (recordIdNum == "0" || recordIdNum == "2" || recordIdNum == "4") {
       console.log(recordIdNum);
-      profile.addClass('item1');
-      profile.removeClass('item1-click');
+      profile.addClass("item1");
+      profile.removeClass("item1-click");
     }
-    if (recordIdNum == '1' || recordIdNum == '3' || recordIdNum == '5') {
-      profile.addClass('item2');
-      profile.removeClass('item2-click');
+    if (recordIdNum == "1" || recordIdNum == "3" || recordIdNum == "5") {
+      profile.addClass("item2");
+      profile.removeClass("item2-click");
     }
     if (recordId != recordIdNum) {
-      profile.removeClass('img-hid');
+      profile.removeClass("img-hid");
     }
-  }  
+  }
 }
+
+$(document).ready(() => {
+  $(".item1").addClass("initial_item1");
+  $(".item2").addClass("initial_item2");
+});
 
 $("body").delegate("img", "click", function (e) {
   const recordId = $(this).attr("record-id");
@@ -123,8 +128,8 @@ $("body").delegate("img", "click", function (e) {
   showModal(recordId);
 });
 
-$("body").delegate(".close","click", function (e){
+$("body").delegate(".close", "click", function (e) {
   const recordId = $(".img-click-hid").attr("record-id");
   hidModal(recordId);
   showPerson(recordId);
-})
+});

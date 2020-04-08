@@ -4,6 +4,7 @@ body {
   height: 100%;
   width: 100%;
   margin: 0;
+  overflow: hidden;
 }
 
 .main-img {
@@ -142,6 +143,7 @@ body {
   cursor: pointer;
   color: #ffffff;
   opacity: 1;
+  position: relative;
 }
 .item1 {
   align-self: flex-start;
@@ -160,6 +162,44 @@ body {
 }
 .item2:hover {
   top: 2px;
+}
+
+.iOver {
+  opacity: 0.5;
+}
+
+.initial_item1 {
+  animation-name: initial_item1;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+}
+
+.initial_item2 {
+  animation-name: initial_item2;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+}
+
+@keyframes initial_item1 {
+  0% {
+    opacity: 0;
+    top: -50px;
+  }
+  100% {
+    opacity: 1;
+    top: 0px;
+  }
+}
+
+@keyframes initial_item2 {
+  0% {
+    opacity: 0;
+    top: 50px;
+  }
+  100% {
+    opacity: 1;
+    top: 0px;
+  }
 }
 
 .item2-click,
@@ -217,12 +257,12 @@ body {
 
 @keyframes modal-show {
   0% {
-    transform: scale(1,0);
+    transform: scale(1, 0);
   }
   50% {
-    transform: scale(1,0);
+    transform: scale(1, 0);
   }
   100% {
-    transform: scale(1,1);
+    transform: scale(1, 1);
   }
 }
